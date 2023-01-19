@@ -1,5 +1,4 @@
-# pHCalc - It calculates the equivalence point, its pH value,
-# and plots or prints the results!
+# pHCalc - It calculates the equivalence point, its pH value and plots or prints the results!
 
 ## What is it?
 **pHCalc** performs several tasks after the titration of an acid using
@@ -96,77 +95,95 @@ new diagram file have to be entered. Without a correct path to the data
 file, pHCalc won't work.
 
 ## Glossar (phcalc.properties)
-### titration tool settings
+* ### titration tool settings
 **log.size**=\<Number\> 
 > Define the size of the log that will be printed after pHCalc has 
 finished a task. 
 
-### Language settings
+* ### Language settings
 **language**=(en | de)
 > possible values: `de` for German, `en` for English
 
-### Acid Parameters
-**mol.mass.acid**=<Number: g/mole>
+* ### Acid Parameters
+**mol.mass.acid**=\<Number: g/mole\>
 > Enter the molar mass of the acid used in grams per mole.
-**dilution**=<Number | 0 |: mL>
+
+**dilution**=\<Number | 0 |: mL\>
 > If the sample of the acid used has been diluted then you can enter the
 amount of water + sample of the acid.
-**sample**=<Number: mL>
+
+**sample**=\<Number: mL\>
 > Enter the volume of sample that has been used for the titration.
-**solution**=<Number | 0 |: mL>
+
+**solution**=\<Number | 0 |: mL\>
 > If the acid has been diluted and the titration has been performed
 using a specific amount of the diluted acid then you'll enter the
 amount of the final solution here. For example, original sample of the acid 
 is 50 mL. Then you dilute this sample until the flask reaches 100 mL. 
 From this diluted amount you take a 20 mL solution. Then you enter 20 mL.
-**acid.formula**=<Formula of the acid: Text>
-**acid.name**=<Name of the acid: Text>
 
-### Titrant Parameters
-**mol.mass.titrant**=<Number: g/mole>
+**acid.formula**=\<Formula of the acid: Text\>
+
+**acid.name**=\<Name of the acid: Text\>
+
+* ### Titrant Parameters
+**mol.mass.titrant**=\<Number: g/mole\>
 > Enter the molar mass of the base, i.e. titrant used in grams per mole.
-**titrant.formula**=<Formula of the base: Text>
-**titrant.name**=<Name of the base: Text>
 
-### Titration
-**threshold**=<Number>
+**titrant.formula**=\<Formula of the base: Text\>
+
+**titrant.name**=\<Name of the base: Text\>
+
+* ### Titration
+**threshold**=\<Number\>
 > Specify the difference between two pH values where you think the 
 equivalence point has been reached. A good difference is for example, 
 1.5 or 2.5. It depends on your data rows.
 
-### Sample
-**sample.name**=<Name of the sample: Text>
+* ### Sample
+**sample.name**=\<Name of the sample: Text\>
 > Enter the sample name that should appear in the results table or
 displayed on the chart.
 
-### Chart
-**chart.title**=<Title of the chart: Text>
-**y.label**=<Label of the y axis: Text>
-**x.label**=<Label of the x axis: Text>
-**data.file**=<Path/to/data.dat>
-**chart.file**=<Path/to/chart.eps>
-> The chart will be created as a .eps file.
-**xtic**=<Number: xtics>
-**ytic**=<Number: ytics>
-**xtic.rotate**=<Number: Rotation of the xtics labels in degrees> 
+* ### Chart
+**chart.title**=\<Title of the chart: Text\>
 
-### Curve Fit: Logistic Regression
-**param.b**=<Number | 0>
+**y.label**=\<Label of the y axis: Text\>
+
+**x.label**=\<Label of the x axis: Text\>
+
+**data.file**=\<Path/to/data.dat\>
+
+**chart.file**=\<Path/to/chart.eps\>
+> The chart will be created as a .eps file.
+
+**xtic**=\<Number: xtics\>
+
+**ytic**=\<Number: ytics\>
+
+**xtic.rotate**=\<Number: Rotation of the xtics labels in degrees\> 
+
+* ### Curve Fit: Logistic Regression
+**param.b**=\<Number | 0\>
 > Growth rate. For a standard logistic curve this is 1 so 1 is a 
 reasonable estimate
-**param.n**=<Number | 0>
+
+**param.n**=\<Number | 0\>
 > Parameter that affects near which asymptote maximum growth occurs. 
 1.0 if we assume the curve is symmetric
-**param.q**=<Number | 0>
+
+**param.q**=\<Number | 0\>
 > Parameter that affects the position of the curve along the ordinate 
 axis.
-**step**=<Number | 1>
+
+**step**=\<Number | 1\>
 > Specify of how many x values the fitted curve should consist of. Enter
 1 if the fitted curve should contain as many x values as the data file.
 
 ## Usage
 The subcommands, its options and parameters apply to both the jar file
 and the script file. Please note that __*__ stands for required option.
+
 
 1. Print the help message and the available subcommands
 ```bash
@@ -188,6 +205,7 @@ $ ./pHCalc help plot
 $ ./pHCalc -h
 ```
 
+
 2. Calculate the equivalence point as well as its pH value
 ```bash
 $ ./pHCalc [OPTION] compute [<FILE>]
@@ -203,6 +221,7 @@ $ ./pHCalc [OPTION] compute [<FILE>]
 ```bash
 $ ./pHCalc compute -v file1.txt
 ```
+
 
 3. Print the calculations in a neatly formatted table
 ```bash
@@ -221,6 +240,7 @@ derivatives in one table and save it in a file:
 ```bash
 $ ./pHCalc print -v -t=data data.txt
 ```
+
 
 4. Plot the calculations or the data rows.
 ```bash
@@ -305,5 +325,6 @@ while on the command line you need to specify `-a=NONE` as the argument.
 It's not necessary to enter a file name for displaying the calculations 
 in neatly formatted tables. Without entering a file, you can view the
 table in your terminal.
+
 
 `pHCalc`(R) Version 1.0 19/01/2023
