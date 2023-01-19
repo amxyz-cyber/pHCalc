@@ -107,8 +107,8 @@ finished a task.
 > Enter the volume of sample that has been used for the titration.
 
 **dilution**=\<Number | 0 |: mL\>
-> If the sample of the acid used has been diluted then you can enter the
-(amount of water + sample size of the acid)
+> If the sample of the acid used has been diluted then you enter the
+> (amount of water + sample size of the acid)
 
 **solution**=\<Number | 0 |: mL\>
 > If the acid has been diluted and the titration has been performed
