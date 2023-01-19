@@ -1,5 +1,5 @@
 # pHCalc - It calculates the equivalence point, its pH value,
- and plots or prints the results!
+# and plots or prints the results!
 
 ## What is it?
 **pHCalc** performs several tasks after the titration of an acid using
@@ -56,7 +56,7 @@ other `jar` file.
 1. Unpack the archive where you would like to store the binaries, e.g.:
 * Unix-based operating systems (Linux, Solaris and Mac OS X)
 	```bash
-	$ tar -zxvf pHCalc-x.y.tar.gz
+	$ tar -xvzf pHCalc-x.y.tar.gz
 	```
 * Windows
 	```bash
@@ -95,9 +95,9 @@ you'll need a **data file** with two columns in the following order:
 new diagram file have to be entered. Without a correct path to the data
 file, pHCalc won't work.
 
-## Glossar(phcalc.properties)
+## Glossar (phcalc.properties)
 ### titration tool settings
-**log.size**=<Number> 
+**log.size**=\<Number\> 
 > Define the size of the log that will be printed after pHCalc has 
 finished a task. 
 
