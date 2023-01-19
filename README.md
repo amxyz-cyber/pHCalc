@@ -2,9 +2,9 @@
 
 ## What is it?
 **pHCalc** performs several tasks after the titration of an acid using
-a base as the titrant has been finished. It calculates the equivalence 
-point together with its pH value based on the second derivative. After 
-having performed the calculation, it prints the results into a neatly 
+a base as the titrant has been finished. It calculates the [equivalence 
+point](supplement/ep.txt) together with its pH value based on the second derivative. After 
+having performed the calculation, it prints the [results](supplement/results.txt) into a neatly 
 formatted table and stores it in a file.
 Additionally, it [plots](supplement/titration-all.png) a titration curve
 together with the first and second derivatives. To accomplish it, it
@@ -53,15 +53,10 @@ script in your terminal and another one which you run just like any
 other `jar` file.
 
 1. Unpack the archive where you would like to store the binaries, e.g.:
-* Unix-based operating systems (Linux, Solaris and Mac OS X)
 	```bash
-	$ tar -xvzf pHCalc-x.y.tar.gz
+	$ tar -xvzf pHCalc-x.y.zip
 	```
-* Windows
-	```bash
-	unzip pHCalc-x.y.zip
-	```
-2. A directory called "pHCalc" will be created.
+2. A directory called **myPHCalc** will be created.
 
 ## Starting pHCalc
 * Unix-based operating systems (Linux, Solaris and Mac OS X)
@@ -108,19 +103,19 @@ finished a task.
 **mol.mass.acid**=\<Number: g/mole\>
 > Enter the molar mass of the acid used in grams per mole.
 
-**dilution**=\<Number | 0 |: mL\>
-> If the sample of the acid used has been diluted then you can enter the
-amount of water + sample of the acid.
-
 **sample**=\<Number: mL\>
 > Enter the volume of sample that has been used for the titration.
+
+**dilution**=\<Number | 0 |: mL\>
+> If the sample of the acid used has been diluted then you can enter the
+(amount of water + sample size of the acid)
 
 **solution**=\<Number | 0 |: mL\>
 > If the acid has been diluted and the titration has been performed
 using a specific amount of the diluted acid then you'll enter the
 amount of the final solution here. For example, original sample of the acid 
 is 50 mL. Then you dilute this sample until the flask reaches 100 mL. 
-From this diluted amount you take a 20 mL solution. Then you enter 20 mL.
+From this diluted amount you take a 20 mL solution. Then you enter 20.
 
 **acid.formula**=\<Formula of the acid: Text\>
 
